@@ -1,0 +1,206 @@
+/*General no tenga espacios */
+* {
+  padding: 0;
+  margin: 0;
+}
+/* Importando el estilo de la fuente */
+body {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+nav {
+  position: relative;
+  z-index: 1;
+}
+
+.navbar-menu {
+  background: #23012e;
+  height: 50px;
+  width: 100%;
+
+  position: fixed;
+  opacity: 0.8;
+}
+
+.logo {
+  position: absolute;
+  color: aliceblue;
+  font-size: 20px;
+  top: 8px;
+  left: 5%;
+  font-weight: bold;
+}
+
+/* La clase navbar esta compuesta por una lista */
+.navbar-menu ul {
+  float: right;
+  margin-right: 20px;
+  list-style: none;
+}
+.nav-horizontal li {
+  display: inline-block;
+  line-height: 50px;
+  margin: 0 5px;
+}
+.nav-horizontal li a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 20px;
+  padding: 5px 10px;
+  position: relative;
+
+  border-radius: 3px;
+}
+
+/* a:focus Cuando doy clic se pone de ese color y a:hover Es cuando paso por encima de las opciones */
+a:focus,
+a:hover {
+  background-color: #2acc8996;
+  transition: 5s;
+}
+
+/* El botón de las barras, el pointer es la mano cuando pasa el cursor ahi */
+.checkbtn {
+  font-size: 22px;
+  float: right;
+  color: #fff;
+  line-height: 48px;
+  margin-right: 25px;
+  cursor: pointer;
+
+  display: none;
+}
+
+/* Ocultando el check */
+#visible {
+  display: none;
+}
+/* Banner normal */
+/* Para el banner */
+section {
+  width: 100%;
+  margin: 0;
+}
+.banner {
+  height: 89vh;
+  position: relative;
+  background-color: rgb(47, 4, 53);
+  margin: 0;
+}
+
+.banner-content img {
+  margin: 5px 0px;
+  width: 100%;
+  opacity: 0.8;
+  overflow: hidden;
+}
+.banner-text {
+  position: absolute;
+  color: rgb(255, 255, 255);
+  top: 50%;
+  left: 40%;
+  transform: translateX(0%) translateY(-25%);
+  font-weight: 900;
+}
+
+.banner-text h2 {
+  font-size: 45px;
+}
+.banner-text a {
+  display: block;
+  /*Ancho del botón*/
+  width: 100px;
+
+  color: rgb(255, 255, 255);
+  /*Para desaparecer el enlace */
+  text-decoration: none;
+  padding: 3px;
+  margin-top: 12px;
+  border: 3px solid rgb(255, 17, 176);
+}
+/*Pasar el cursor en el botón*/
+.banner-text a:hover {
+  background-color: rgb(61, 6, 43);
+  color: grey;
+}
+
+/* Termina banner normal */
+
+@media (max-width: 1024px) {
+  .logo {
+    padding-left: 40px;
+  }
+  .nav-horizontal li a {
+    font-size: 16px;
+    padding: 7px 10px;
+  }
+  /*Composición para el banner en una tablet*/
+  .banner {
+    height: 89vh;
+  }
+  .banner-content img {
+    margin-top: 50px;
+    width: 100%;
+    opacity: 0.5;
+  }
+}
+
+/* Medium query esto es para lo responsivo*/
+/* Poniendo medidas por cada dispositivo */
+@media (max-width: 768px) {
+  .checkbtn {
+    display: block;
+  }
+  .nav-horizontal {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #000000;
+    top: 50px;
+    left: -100%;
+    text-align: center;
+    /*Que se mueva de lado izquierdo como una transición */
+    transition: all 0.5s;
+  }
+  /*Para que muestre el menú en forma horizontal responsiva */
+  .nav-horizontal li {
+    display: block;
+    border-bottom: 1px solid #192f4d;
+    z-index: 1;
+  }
+  .nav-horizontal li a {
+    font-size: 18px;
+  }
+  nav li:hover {
+    background-color: #2acc8996;
+  }
+  nav li a:hover {
+    color: azure;
+  }
+  #visible:checked ~ ul {
+    left: 0;
+  }
+  .banner {
+    height: 50vh;
+    position: relative;
+  }
+  .banner-text h2 {
+    font-size: 20px;
+  }
+  .banner-text p {
+    font-size: 14px;
+  }
+  .banner-text a {
+    font-size: 14px;
+    width: 40px;
+  }
+  .banner-content img {
+    margin-top: 50px;
+    opacity: 0.5;
+  }
+}
+
+.servicios {
+  margin: 0;
+}
