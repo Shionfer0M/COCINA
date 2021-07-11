@@ -2,6 +2,7 @@
 * {
   padding: 0;
   margin: 0;
+  background-color: #23012e;
 }
 /* Importando el estilo de la fuente */
 body {
@@ -82,13 +83,14 @@ section {
   width: 100%;
   margin: 0;
 }
+/*
 .banner {
   height: 89vh;
   position: relative;
   background-color: rgb(47, 4, 53);
   margin: 0;
 }
-
+*/
 .banner-content img {
   margin: 5px 0px;
   width: 100%;
@@ -102,10 +104,15 @@ section {
   left: 40%;
   transform: translateX(0%) translateY(-25%);
   font-weight: 900;
+  background-color: transparent;
 }
 
 .banner-text h2 {
   font-size: 45px;
+  background-color: transparent;
+}
+.banner-text p {
+  background-color: transparent;
 }
 .banner-text a {
   display: block;
@@ -117,11 +124,11 @@ section {
   text-decoration: none;
   padding: 3px;
   margin-top: 12px;
-  border: 3px solid rgb(255, 17, 176);
+  border: 3px solid rgb(61, 6, 43);
 }
 /*Pasar el cursor en el botón*/
 .banner-text a:hover {
-  background-color: rgb(61, 6, 43);
+  background-color: transparent;
   color: grey;
 }
 
@@ -144,6 +151,10 @@ section {
     width: 100%;
     opacity: 0.5;
   }
+}
+
+.servicios-content {
+  color: #fff;
 }
 
 /* Medium query esto es para lo responsivo*/
