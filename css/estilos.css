@@ -2,7 +2,6 @@
 * {
   padding: 0;
   margin: 0;
-  background-color: #23012e;
 }
 /* Importando el estilo de la fuente */
 body {
@@ -81,16 +80,17 @@ a:hover {
 /* Para el banner */
 section {
   width: 100%;
+  /*hyphens: 100%;*/
   margin: 0;
 }
-/*
+
 .banner {
   height: 89vh;
   position: relative;
   background-color: rgb(47, 4, 53);
   margin: 0;
 }
-*/
+
 .banner-content img {
   margin: 5px 0px;
   width: 100%;
@@ -101,7 +101,7 @@ section {
   position: absolute;
   color: rgb(255, 255, 255);
   top: 50%;
-  left: 40%;
+  left: 30%;
   transform: translateX(0%) translateY(-25%);
   font-weight: 900;
   background-color: transparent;
@@ -132,6 +132,44 @@ section {
   color: grey;
 }
 
+footer {
+  position: relative;
+}
+.footer {
+  height: 8vh;
+  background-color: #23012e;
+  color: #fff;
+  margin: 0;
+  text-align: center;
+}
+
+.social {
+  width: 8%;
+  float: left;
+  margin-top: 5px;
+  text-align: center;
+}
+/* Texto copr */
+
+.social label a {
+  color: #fff;
+}
+
+.social label i {
+  font-size: 25px;
+  padding: 0 2px;
+}
+.social label i:hover {
+  color: #740449;
+}
+/*
+.copr {
+  width: 50px;
+  float: left;
+  margin-top: 5px;
+  text-align: left;
+}
+*/
 /* Termina banner normal */
 
 @media (max-width: 1024px) {
@@ -151,12 +189,231 @@ section {
     width: 100%;
     opacity: 0.5;
   }
+
+  /* Sección servicios */
+  .servicios,
+  .platillos,
+  .contacto {
+    height: 100vh;
+  }
+  .img-cocinast {
+    width: 180px;
+    height: 180px;
+  }
+  /* Para la clase platillos */
+  .platillos-sabor-carta p {
+    font-size: 13px;
+  }
+  .img-platillos-perfil {
+    width: 50px;
+    height: 50px;
+  }
+  .control {
+    width: 75%;
+    padding: 0.3rem;
+    margin: 0.6rem 1rem;
+  }
+  .btn-enviar {
+    font-size: 0.8rem;
+  }
+  .contacto-img img {
+    width: 75%;
+  }
+  /*footer*/
+  .footer {
+    height: 15vh;
+  }
+  .social {
+    width: 100%;
+  }
+  .social label i {
+    font-size: 25px;
+  }
+  .copr {
+    width: 100%;
+    text-align: center;
+    margin-top: 2px;
+  }
 }
 
+.servicios {
+  height: 97vh;
+  position: relative;
+  background-color: #1d1e20;
+}
 .servicios-content {
   color: #fff;
+  width: 100%;
+  hyphens: 100%;
+  padding: 30px 0;
+  text-align: center;
+  background-color: #1d1e20;
+}
+.servicios-content h2 {
+  font-size: 45px;
+  text-transform: uppercase;
+  background-color: #1d1e20;
+}
+.servicios-content p,
+.servicios-content h2 {
+  /* Ajustando el párrafo desde loos costados */
+  padding: 10px 50px;
+  background-color: #1d1e20;
+}
+.servicios h4 {
+  background-color: #1d1e20;
 }
 
+.servicios-img {
+  width: 100%;
+  /* Se acomodan bien las imagenes */
+  box-sizing: border-box;
+  /* margen de separación */
+  margin-top: 30px;
+  /*relleno*/
+  padding: 0 50px;
+  background-color: #1d1e20;
+}
+.servicios-img2 {
+  width: 33%;
+  /* Las imagenes se van a la izquierda como una fila */
+  float: left;
+  background-color: #1d1e20;
+}
+/*Formato para las imágenes de la sección trabajo */
+.img-cocinast {
+  width: 280px;
+  height: 280px;
+  /*Para asignarlo a lado izquierdo */
+  display: block;
+  background-color: #1d1e20;
+  /* Para centrar un poquito mas */
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 10px;
+}
+
+/*Platillos*/
+.platillos {
+  height: 97vh;
+  position: relative;
+  /*imágen*/
+  background: url(../img/fondo-platillos.png);
+  /*que ocupe toda la pantalla (cover) se ve todo de forma adaptable*/
+  background-size: cover;
+  /*Efecto paralise al mover el scroll a otra sección se qued estatica la imágen donde queda un efecto bonito*/
+  background-attachment: fixed;
+  color: rgb(24, 22, 22);
+}
+.platillos-content {
+  width: 100%;
+  height: 100%;
+  padding: 30px 0;
+  text-align: center;
+}
+.platillos-content h2 {
+  font-size: 45px;
+  text-transform: uppercase;
+}
+.platillos-content p,
+.platillos-content h2 {
+  padding: 10px 50px;
+}
+.platillos-sabor {
+  width: 100%;
+  box-sizing: border-box;
+  /* Para que se aleje un poco del párrafo o título*/
+  margin-top: 2px;
+  /*Ajustar un poco en la imágen o en el fondo */
+  padding: 0 50px;
+}
+.platillos-sabor-carta {
+  width: 25%;
+  /*acomodando todos en fila */
+  float: left;
+}
+.img-platillos-perfil {
+  width: 180px;
+  height: 180px;
+  /*Las imagenes estarán de forma redonda*/
+  border-radius: 50%;
+  border: 3px solid rgb(61, 6, 43);
+}
+/*--------------------CONTACTO----------------*/
+.contacto {
+  height: 97vh;
+  position: relative;
+  display: block;
+  background-color: #740449;
+}
+.contacto-content {
+  width: 100%;
+  height: 100%;
+  padding: 10px 0;
+  text-align: center;
+}
+.contacto-content h2 {
+  font-size: 45px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.contacto-content p,
+.contacto-content h2 {
+  padding: 10px 50px;
+  color: #fff;
+}
+.contacto-servicio {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 5px;
+  padding: 0 50px;
+}
+.formulario-contacto {
+  width: 50%;
+  float: left;
+}
+.contacto-img {
+  width: 30%;
+  display: block;
+  text-align: center;
+  float: left;
+}
+.contacto-img img {
+  width: 75%;
+  display: block;
+  text-align: center;
+  border-radius: 50%;
+  border: 3px solid rgb(61, 6, 43);
+
+  /*Mandar la imágen al centro*/
+  margin: auto;
+}
+.control {
+  /* Dandole formato al formulario */
+  width: 85%;
+  padding: 0.8rem;
+  margin: 0.6rem 1rem;
+  display: block;
+  font-size: 16px;
+  outline: 0;
+
+  border-radius: 5px;
+  border: 1.5px solid #192f4d;
+}
+.btn-enviar {
+  display: block;
+  font-size: 1rem;
+  text-transform: uppercase;
+  background: #23012e;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  margin: 0.6rem 1rem;
+  border-radius: 5px;
+
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
 /* Medium query esto es para lo responsivo*/
 /* Poniendo medidas por cada dispositivo */
 @media (max-width: 768px) {
@@ -210,8 +467,57 @@ section {
     margin-top: 50px;
     opacity: 0.5;
   }
-}
+  /* Sección servicios y platillos para móviles */
+  .servicios,
+  .platillos,
+  .contacto {
+    height: 165vh;
+  }
+  .servicios-content h2,
+  .platillos-content h2,
+  .contacto-content h2 {
+    font-size: 35px;
+  }
+  .img-cocinast {
+    width: 160px;
+    height: 160px;
+  }
+  .servicios-img2 {
+    width: 100%;
+    /*Espacios entre cada imágen*/
+    margin-bottom: 20px;
+  }
+  /* Para platillos versión móvil*/
+  .platillos-sabor-carta {
+    width: 100%;
+    margin-bottom: 5px;
+  }
 
-.servicios {
-  margin: 0;
+  .img-platillos-perfil {
+    width: 135px;
+    height: 135px;
+  }
+  .platillos-sabor-carta p {
+    padding: 0 0;
+  }
+  .formulario-contacto,
+  .contacto-img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .control,
+  .btn-enviar {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .btn-enviar {
+    width: 77%;
+  }
+  .copr p {
+    font-size: 14px;
+  }
+
+  .servicios {
+    margin: 0;
+  }
 }
